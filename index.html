@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>موقعي الشخصي</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      direction: rtl;
+    }
+    header {
+      background-color: #009688;
+      color: white;
+      padding: 50px 20px;
+    }
+    header h1 {
+      margin: 0;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: #009688;
+    }
+    .portfolio img {
+      width: 100%;
+      max-width: 250px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    input, textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #009688;
+      color: white;
+      padding: 10px;
+      border: none;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00796b;
+    }
+    .chat-box {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+      background-color: #fff;
+    }
+    .chat-bubble {
+      background-color: #e0f2f1;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>مرحباً بك في موقعي</h1>
+    <p>تم إنشاؤه بالكامل بواسطة ChatGPT ♥</p>
+  </header>
+
+  <section id="about">
+    <h2>السيرة الذاتية</h2>
+    <p>أنا شخص طموح أتعلم تصميم وبرمجة المواقع. هذا الموقع هو أول أعمالي، وكل شيء تم إنشاؤه بمساعدة الذكاء الاصطناعي.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>أعمالي</h2>
+    <div class="portfolio">
+      <img src="https://placekitten.com/250/200" alt="مشروع 1">
+      <img src="https://placekitten.com/251/200" alt="مشروع 2">
+      <img src="https://placekitten.com/252/200" alt="مشروع 3">
+    </div>
+  </section>
+
+  <section id="chat">
+    <h2>شات وهمي</h2>
+    <div class="chat-box">
+      <div class="chat-bubble">👤 مرحباً، كيف أقدر أساعدك؟</div>
+      <div class="chat-bubble">🤖 هذا مجرد شات تجريبي، ليس حقيقي 😄</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>تواصل معي</h2>
+    <form onsubmit="sendMail(); return false;">
+      <input type="text" id="name" placeholder="الاسم" required>
+      <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+      <textarea id="message" placeholder="اكتب رسالتك هنا..." rows="4" required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
+
+  <script>
+    function sendMail() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const mailto = `mailto:example@email.com?subject=رسالة من ${name}&body=البريد: ${email}%0A%0Aالرسالة:%0A${message}`;
+      window.location.href = mailto;
+    }
+  </script>
+
+</body>
+</html>
